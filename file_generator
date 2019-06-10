@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "choose the number of files: "
+read files_number
+
+for i in $(seq 1 $files_number); do
+	fileName=exercise$i.php;
+	touch $fileName;
+	echo "<?php" > $fileName;
+	echo "file $fileName created";
+done;
+
+echo "type the name of folder to move the created files"
+read folder_name
+mkdir $folder_name
+mv exer* $folder_name
+echo "the files has been moved\n"
+echo "choose the folder to move the created folder"
+read folder
+mv $folder_name $folder
+echo "everything done ;)"
