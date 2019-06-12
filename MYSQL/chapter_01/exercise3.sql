@@ -1,3 +1,9 @@
+-- Extra Code
+CREATE TABLE bandas(
+  id INTEGER PRIMARY KEY,
+  nome TEXT NOT NULL
+);
+
 type: final_dataset
 final: PRAGMA table_info("bandas");
 expected: |
