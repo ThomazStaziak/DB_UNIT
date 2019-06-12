@@ -4,9 +4,8 @@ echo "choose the number of files: "
 read files_number
 
 for i in $(seq 1 $files_number); do
-	fileName=exercise$i.php;
+	fileName=exercise$i.sql;
 	touch $fileName;
-	echo "<?php" > $fileName;
 	echo "file $fileName created";
 done;
 
